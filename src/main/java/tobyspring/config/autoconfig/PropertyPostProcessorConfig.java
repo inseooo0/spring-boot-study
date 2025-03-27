@@ -14,7 +14,7 @@ import java.util.Map;
 @MyAutoConfiguration
 public class PropertyPostProcessorConfig {
     @Bean
-    BeanPostProcessor propertyPostProcessor(Environment env) {
+    static BeanPostProcessor propertyPostProcessor(Environment env) {
         return new BeanPostProcessor() {
             @Override
             public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
